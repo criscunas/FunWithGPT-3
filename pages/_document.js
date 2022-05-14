@@ -7,9 +7,10 @@ export default function Document() {
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link 
           href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap" 
-          rel="preload" 
-          as="font"
-          crossOrigin=""
+          rel="stylesheet preload prefetch" 
+          as="style"
+          type = "text/css"
+          crossOrigin="anonymous"
         />
       </Head>
       <body>

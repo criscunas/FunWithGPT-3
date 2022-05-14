@@ -1,4 +1,6 @@
 @use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+@use '../../../styles/assets/displayMixins.scss' as *;
 
 .layout {
   background-color: $black;
