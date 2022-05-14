@@ -1,0 +1,123 @@
+@mixin caption-text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+
+@mixin body-text {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+@mixin button-text {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 500;
+}
+
+@mixin subheading-text {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+@mixin heading-text {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+@mixin pageheading-text {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+@mixin displaySmall {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+@mixin displayMedium {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+@mixin displayLarge {
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+@mixin displayXL {
+  font-size: 42px;
+  line-height: 44px;
+  font-weight: 500;
+}
+
+
+@mixin mobile-caption-text {
+font-size: 13px;
+line-height: 20px;
+font-weight: 400;
+}
+
+@mixin mobile-body-text {
+font-size: 15px;
+line-height: 20px;
+font-weight: 400;
+
+}
+
+@mixin mobile-button-text {
+font-size: 15px;
+line-height: 15px;
+font-weight: 500;
+}
+
+@mixin mobile-subheading-text {
+font-size: 13px;
+line-height: 16px;
+font-weight: 600;
+text-transform: uppercase;
+}
+
+@mixin mobile-heading-text {
+font-size: 17px;
+line-height: 24px;
+font-weight: 500;
+}
+
+@mixin mobile-pageheading-text {
+font-size: 24px;
+line-height: 28px;
+font-weight: 600;
+}
+
+@mixin mobile-displaySmall {
+font-size: 16px;
+line-height: 24px;
+font-weight: 400;
+}
+
+@mixin mobile-displayMedium {
+font-size: 21px;
+line-height: 28px;
+font-weight: 400;
+}
+
+@mixin mobile-displayLarge {
+font-size: 24px;
+line-height: 28px;
+font-weight: 500;
+}
+
+@mixin mobile-displayXL {
+font-size: 27px;
+line-height: 36px;
+font-weight: 500;
+}

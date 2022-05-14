@@ -1,0 +1,31 @@
+@use './variables.scss' as *;
+
+@mixin mobile {
+  @media screen and (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin tabletSm {
+  @media screen and (min-width: $before-tablet) {
+    @content;
+  }
+}
+
+@mixin tabletMd {
+  @media screen and (min-width: $tablet-size) {
+    @content;
+  }
+}
+
+@mixin breakpt {
+  @media screen and (min-width: $midpoint-size) {
+    @content;
+  }
+}
+
+@mixin desktopLg {
+  @media screen and (min-width: $desktop-size) {
+    @content;
+  }
+}
