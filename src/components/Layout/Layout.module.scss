@@ -1,0 +1,10 @@
+@use '../../../styles/assets/variables.scss' as *;
+
+.layout {
+  background-color: $black;
+  
+
+  &__content {
+    padding: 0 1rem;
+  }
+}
