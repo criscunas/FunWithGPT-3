@@ -17,7 +17,7 @@ export default function Home() {
           Shopify Developer Intern Challenge
         </p>
       </div>
-      <Paper elevation={2} variant="elevated" className={style.home__content}>
+      <Paper elevation={2} variant="elevation" className={style.home__content}>
         <div className={style.home__content_head}>
           <h2 className={style.home__content_title}>Select an AI engine</h2>
           <div className={style.home__content_options}>

@@ -1,8 +1,7 @@
-import {Button} from '@material-ui/core';
+import style from "./DetailsCard.module.scss";
+import { Button } from "@material-ui/core";
 
-import style from './DetailsCard.module.scss';
-
-export const DetailsCard = ({title, description}) => {
+export const DetailsCard = ({ title, description }) => {
   return (
     <div className={style.card}>
       <div className={style.card__body}>
@@ -16,6 +15,4 @@ export const DetailsCard = ({title, description}) => {
       </div>
     </div>
   );
-}
-
-
+};
