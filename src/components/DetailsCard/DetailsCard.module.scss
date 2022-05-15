@@ -20,7 +20,17 @@
 
   &__description {
     @include mobile-body-text;
-    line-height: 1.4rem;
+    line-height: 1.5rem;
+  }
+
+  &__good {
+    padding-top: 1rem;
+  }
+
+
+  &__good_at {
+    @include mobile-caption-text;
+    font-weight: 600;
   }
 
   &__button {
