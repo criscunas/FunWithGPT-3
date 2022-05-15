@@ -1,0 +1,41 @@
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+@use '../../../styles/assets/displayMixins.scss' as *;
+
+.prompt {
+  display: flex;
+  flex-direction: column;
+  
+  margin: 0.5rem;
+  
+
+  &__header {
+    @include mobile-displayMedium;
+    padding-bottom: 1rem;
+
+  }
+
+  &__textfield {
+    
+  }
+
+  &__button_container {
+    padding: 1rem 0;
+  }
+
+  &__button {
+    max-width: 100px;
+    background-color: $shopify-mdg !important;
+    align-self: flex-end;
+  }
+
+  &__button_text {
+    text-transform: none;
+    color: white;
+    padding: 0.2rem;
+    @include mobile-button-text;
+  }
+
+
+
+}
