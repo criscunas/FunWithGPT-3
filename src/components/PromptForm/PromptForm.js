@@ -1,6 +1,6 @@
 import style from './PromptForm.module.scss';
 import { useFormik} from "formik";
-import { TextField, Button, IconButton} from "@material-ui/core";
+import { TextField, IconButton} from "@material-ui/core";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import * as Yup from "yup";
 
