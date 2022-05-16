@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import Head from "next/head";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import Layout from "../src/components/Layout/Layout";
+import { Provider } from 'react-redux';
+import store from '../app/store';
 
 export default function MyApp(props) {
   const {
@@ -29,7 +31,9 @@ export default function MyApp(props) {
       </Head>
       <CssBaseline />
       <Layout>
-        <Component {...pageProps} />
+        <Provider store={store}>
+          <Component {...pageProps} />
+        </Provider>
       </Layout>
     </React.Fragment>
   );
