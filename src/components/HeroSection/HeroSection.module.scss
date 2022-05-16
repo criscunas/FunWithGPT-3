@@ -1,0 +1,22 @@
+@use './styles/assets/fontMixins.scss' as *;
+@use './styles/assets/displayMixins.scss' as *;
+@use './styles/assets/variables.scss' as *;
+
+
+.hero {
+
+  padding-top: 2rem;
+
+  &__title {
+    @include mobile-displayXL;
+    color: whitesmoke;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid $polaris-yellow;
+  }
+
+  &__subhead {
+    padding-top: 1rem;
+    @include mobile-displayMedium;
+    color: $shopify-lg;
+  }
+}
