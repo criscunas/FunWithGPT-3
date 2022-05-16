@@ -4,70 +4,30 @@
 
 .home {
 
-
-  &__header {
-    padding-top: 2rem;
-  }
-
-  &__header_title {
-    @include mobile-displayXL;
-    color: whitesmoke;
-    padding-bottom: 0.5rem;
-    border-bottom: 3px solid $polaris-yellow;
-  }
-
-  &__header_subhead {
-    padding-top: 1rem;
-    @include mobile-displayMedium;
-    color: $shopify-lg;
-  }
-
   &__content {
     margin: 1.5rem 0;
+    padding: 0 0.5rem;
   }
 
-  &__content_head {
-    padding: 1rem 0 1rem 0.5rem;
-  }
 
-  &__content_title {
+  &__title {
     @include mobile-displayMedium;
     font-weight: 600;
-    padding: 0.5rem;
-  }
-
-  &__content_subtitle {
-    padding: 1rem 0;
-  }
-
-  &__swiper {
-
-    height:fit-content;
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   }
 
   &__engine {
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    padding: 1rem 0rem 0.5rem 0rem;
     text-align: center;
     @include mobile-displaySmall;
   }
 
   &__form {
-    padding: 1rem 0.5rem;
+    padding: 0.5rem 0.5rem;
   }
 
-  &__options {
-    display: flex;
-    justify-content: space-evenly;
-    border-top: 2px solid $shopify-mdg;
-    border-bottom: 2px solid $shopify-mdg;
-    border-radius: 3px;
+  &__response {
+    padding: 0.5rem;
   }
 
-  &__options_text {
-    padding: 1rem 0;
-    color: black;
-    flex: 1;
-    @include mobile-button-text;
-    text-align: center;
-  }
 }
