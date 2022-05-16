@@ -1,6 +1,7 @@
 import style from './PromptForm.module.scss';
 import { useFormik} from "formik";
-import { TextField, Button} from "@material-ui/core";
+import { TextField, IconButton} from "@material-ui/core";
+import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import * as Yup from "yup";
 
 export const PromptForm = ({handler}) => {
@@ -15,7 +16,7 @@ export const PromptForm = ({handler}) => {
       prompt: ""
     },
     onSubmit: (values, { resetForm }) => {
-      handler();
+      handler(values)
       resetForm();
     },
   });
@@ -23,13 +24,23 @@ export const PromptForm = ({handler}) => {
   return (
     <>
       <form onSubmit={formik.handleSubmit} className={style.prompt}>
-        <h2 className={style.prompt__header}> Enter Prompt </h2>
+        <div className={style.prompt__header}>
+          <h1 className={style.prompt__header_text}> Enter Prompt </h1>
+          <IconButton
+            color="primary"
+            aria-label="play button"
+            component="span"
+            onClick={formik.handleSubmit}
+          >
+            <PlayCircleOutlineIcon fontSize="large" htmlColor="#02604E" />
+          </IconButton>
+        </div>
         <TextField
           name="prompt"
-          placeholder='Prompt'
-          variant= 'outlined'
+          placeholder="Prompt"
+          variant="outlined"
           type="text"
-          margin='dense'
+          margin="dense"
           size="medium"
           multiline
           minRows={10}
@@ -39,16 +50,6 @@ export const PromptForm = ({handler}) => {
           error={formik.touched.prompt && Boolean(formik.errors.prompt)}
           helperText={formik.touched.prompt && formik.errors.prompt}
         />
-        <div className={style.prompt__button_container}>
-          <Button
-            className={style.prompt__button}
-            size="small"
-            type="submit"
-            variant="contained"
-          >
-            <p className={style.prompt__button_text}> Ready ? </p>
-          </Button>
-        </div>
       </form>
     </>
   );
