@@ -4,15 +4,27 @@
 
 .home {
 
+  max-width: 925px;
+  margin: 0 auto;
+
   &__content {
     margin: 1.5rem 0;
     padding: 0 0.5rem;
   }
 
+  &__welcome {
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+    
+  }
+
+  &__welcome_title {
+    @include mobile-displayMedium;
+    font-weight: 600;
+    padding-bottom: 1rem;
+  }
 
   &__title {
     @include mobile-displayMedium;
-    font-weight: 600;
     padding: 1.5rem 0.5rem 0.5rem 0.5rem;
   }
 
@@ -28,6 +40,9 @@
 
   &__response {
     padding: 0.5rem;
+    max-width: 500px;
+    margin: 0 auto;
   }
 
 }
+

@@ -7,6 +7,8 @@ import "swiper/css";
 
 export const SwiperList = ({handler}) => {
   return (
+    <div className = {style.swiper__container}>
+    <h1 className={style.swiper__header}>Select an AI engine </h1>
     <Swiper className={style.swiper}>
       {data.options.map((opt, i) => {
         return (
@@ -21,5 +23,6 @@ export const SwiperList = ({handler}) => {
         );
       })}
     </Swiper>
+    </div>
   );
 }
