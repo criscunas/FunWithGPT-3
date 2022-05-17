@@ -3,8 +3,7 @@
 @use '../../../styles/assets/displayMixins.scss' as *;
 
 .card {
-  // border: 1px solid red;
-  // margin: 1rem 0;
+
   margin-top: 0.5rem;
 
   &__body {
@@ -21,6 +20,11 @@
   &__description {
     @include mobile-body-text;
     line-height: 1.5rem;
+
+    @include tabletSm {
+      font-size: 1rem;
+      
+    }
   }
 
   &__good {
@@ -36,6 +40,10 @@
   &__button {
     padding: 1.5rem 0 0.5rem 0;
     text-align: center;
+    
+    @include tabletSm {
+      padding: 2rem 0 0.5rem 0;
+    }
 
     Button {
       background-color: $shopify-mdg;

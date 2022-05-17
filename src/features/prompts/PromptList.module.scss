@@ -27,6 +27,9 @@
   }
 
   &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     @include mobile-displayMedium;
     padding: 1rem 0 1rem 0rem;
   }

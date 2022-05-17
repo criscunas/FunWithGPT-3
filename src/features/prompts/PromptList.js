@@ -2,6 +2,7 @@ import { useSelector, shallowEqual, useDispatch } from "react-redux";
 import style from './PromptList.module.scss';
 import {Grid ,Card } from "@material-ui/core";
 import ClearIcon from "@mui/icons-material/Clear";
+import DeleteSweepRoundedIcon from "@mui/icons-material/DeleteSweepRounded";
 
 const selectedPrompts = (state) => state.prompts.map((prompt) => prompt.data)
 
@@ -11,6 +12,10 @@ const PromptList = () => {
 
   const deleteResponse = (id) => {
     dispatch({ type: "prompts/delete", payload: id });
+  }
+
+  const deleteAll = () => {
+    dispatch({type:'prompts/allDelete'})
   }
 
   const prompts = useSelector(selectedPrompts, shallowEqual);
@@ -40,7 +45,9 @@ const PromptList = () => {
 
   return (
     <div className = {style.response__container}>
-      <h1 className={style.response__title}>Responses</h1>
+      <h1 className={style.response__title}>Responses 
+      <span>  <DeleteSweepRoundedIcon onClick = {() => deleteAll() } color = "error" /> </span> 
+      </h1>
       <Grid container spacing={1}>
         {renderedListItems}
       </Grid>

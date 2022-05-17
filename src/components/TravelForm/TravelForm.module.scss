@@ -1,0 +1,16 @@
+@use '../../../styles/assets/displayMixins.scss' as *;
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+
+
+.travelform {
+
+  display: flex;
+  
+
+  &__body {
+    display: flex;
+    gap: 1rem;
+    
+  }
+}
