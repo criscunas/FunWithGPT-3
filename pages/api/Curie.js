@@ -1,7 +1,7 @@
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-  apiKey: process.env.apiKey,
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -19,6 +19,6 @@ export default async function (req, res) {
 
 function generatePrompt(prompt) {
   const capitalizedPrompt =
-    prompt[0].toUpperCase() + prompt.slice(1).toLowerCase();
+  prompt[0].toUpperCase() + prompt.slice(1).toLowerCase();
   return ` Prompt: ${capitalizedPrompt} Response:`;
 }
