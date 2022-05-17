@@ -1,0 +1,53 @@
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+@use '../../../styles/assets/displayMixins.scss' as *;
+
+.travel {
+
+  padding: 1rem 0.5rem 0rem 0.5rem;
+  max-width: 500px;
+  margin: 0 auto;
+
+  @include tabletSm {
+    padding: 1.5rem 0.5rem 0rem 0.5rem;
+  }
+
+  &__title {
+    @include mobile-displayMedium;
+
+    @include tabletSm {
+      @include displayMedium;
+    }
+  }
+  
+  &__subtitle {
+    padding-top: 0.5rem;
+    @include mobile-body-text;
+
+    @include tabletSm {
+      @include heading-text;
+      padding-top: 1rem;
+    }
+
+    
+  }
+
+  &__form {
+    margin: 1.5rem 0;
+  }
+
+  &__results {
+    padding: 1rem 0 1.5rem 0;
+
+  }
+
+  &__results_title {
+    
+    @include mobile-heading-text;
+
+    @include tabletSm {
+      padding: 1rem 0 1.5rem 0;
+      @include displaySmall;
+    }
+  }
+}
