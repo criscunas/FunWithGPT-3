@@ -19,6 +19,9 @@ export default function promptReducer(state = initialState, action) {
     case 'prompts/delete' : {
       return state.filter((prompt) => prompt.id !== action.payload )
     }
+    case 'prompts/allDelete' : {
+      return initialState;
+    }
 
     default:
       return state
