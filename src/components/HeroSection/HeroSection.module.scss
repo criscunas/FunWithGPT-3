@@ -1,0 +1,41 @@
+@use '../../../styles/assets/displayMixins.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+@use '../../../styles/assets/variables.scss' as *;
+
+
+
+.hero {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 2rem;
+
+  @include tabletSm {
+    padding-top: 3rem;
+  }
+
+  &__title {
+    @include mobile-displayXL;
+    color: whitesmoke;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid $polaris-yellow;
+
+    @include tabletSm {
+      @include displayXL;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__subhead {
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    @include mobile-displayMedium;
+    color: $shopify-lg;
+
+    
+    @include tabletSm {
+      @include displayMedium;
+      padding-top: 1.5rem;
+      padding-bottom: 1rem;
+    }
+  }
+}

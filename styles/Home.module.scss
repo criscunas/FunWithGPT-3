@@ -1,3 +1,48 @@
+@use '../styles/assets/fontMixins.scss' as *;
+@use '../styles/assets/displayMixins.scss' as *;
+@use '../styles/assets/variables.scss' as *;
+
 .home {
-  
+
+  max-width: 925px;
+  margin: 0 auto;
+
+  &__content {
+    margin: 1.5rem 0;
+    padding: 0 0.5rem;
+  }
+
+  &__welcome {
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+    
+  }
+
+  &__welcome_title {
+    @include mobile-displayMedium;
+    font-weight: 600;
+    padding-bottom: 1rem;
+  }
+
+  &__title {
+    @include mobile-displayMedium;
+    padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  &__engine {
+    padding: 1rem 0rem 0.5rem 0rem;
+    text-align: center;
+    @include mobile-displaySmall;
+  }
+
+  &__form {
+    padding: 0.5rem 0.5rem;
+  }
+
+  &__response {
+    padding: 0.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
 }
+

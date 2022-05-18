@@ -1,0 +1,78 @@
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+@use '../../../styles/assets/displayMixins.scss' as *;
+
+
+.travel {
+
+  padding: 1rem 0.5rem 0rem 0.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @include tabletSm {
+    padding: 2rem 0.5rem 0rem 0.5rem;
+  }
+
+  &__title {
+    @include mobile-displayMedium;
+    padding-bottom: 1rem;
+
+    @include tabletSm {
+      @include displayMedium;
+    }
+  }
+  
+  &__subtitle {
+    
+    @include mobile-body-text;
+
+    @include tabletSm {
+      @include heading-text;
+    }
+  }
+
+  &__note {
+    padding: 0.5rem 0 0.5rem 0;
+    @include mobile-caption-text;
+
+    @include tabletSm {
+      @include body-text;
+    }
+  }
+
+  &__form {
+    margin: 1.5rem 0;
+  }
+
+  &__form_random {
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    padding: 1.5rem 0.5rem 0 0.5rem;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__form_text {
+    @include mobile-body-text;
+  }
+
+  &__results {
+    padding: 1rem 0 1.5rem 0;
+
+  }
+
+  &__results_title {
+    @include mobile-heading-text;
+
+    @include tabletSm {
+      padding: 1rem 0 1.5rem 0;
+      @include displaySmall;
+    }
+  }
+
+  &__loading {
+    text-align: center;
+    color: green;
+  }
+}

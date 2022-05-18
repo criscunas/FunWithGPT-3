@@ -1,0 +1,36 @@
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+@use '../../../styles/assets/displayMixins.scss' as *;
+
+.prompt {
+  display: flex;
+  flex-direction: column;  
+  max-width: 600px;
+  margin: 1rem auto;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  &__header_text {
+    
+    @include mobile-displayMedium;
+
+  }
+
+  &__engine {
+    @include mobile-body-text;
+  }
+
+  &__button {
+    max-width: 100px;
+    background-color: $shopify-mdg !important;
+    align-self: flex-end;
+  }
+
+
+
+}

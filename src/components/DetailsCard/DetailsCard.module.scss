@@ -1,0 +1,59 @@
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+@use '../../../styles/assets/displayMixins.scss' as *;
+
+.card {
+
+  margin-top: 0.5rem;
+
+  &__body {
+    padding: 0 0.5rem;
+  }
+
+  &__header {
+    @include mobile-displayMedium;
+    padding: 0.5rem 0 1rem 0;
+    color:$headingBlack;
+  }
+
+
+  &__description {
+    @include mobile-body-text;
+    line-height: 1.5rem;
+
+    @include tabletSm {
+      font-size: 1rem;
+      
+    }
+  }
+
+  &__good {
+    padding-top: 1rem;
+  }
+
+
+  &__good_at {
+    @include mobile-caption-text;
+    font-weight: 600;
+  }
+
+  &__button {
+    padding: 1.5rem 0 0.5rem 0;
+    text-align: center;
+    
+    @include tabletSm {
+      padding: 2rem 0 0.5rem 0;
+    }
+
+    Button {
+      background-color: $shopify-mdg;
+    }
+  }
+
+  &__button_text {
+    @include mobile-button-text;
+    color: white;
+    padding: 0.2rem;
+    text-transform: none;
+  }
+}

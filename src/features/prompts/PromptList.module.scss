@@ -1,0 +1,36 @@
+@use '../../../styles/assets/displayMixins.scss' as *;
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+
+.response {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem 0.5rem;
+  margin-bottom: 0.5rem;
+  // padding: 1rem 0.5rem;
+  
+  &__answer {
+    @include mobile-body-text;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  &__answer_text {
+    @include mobile-body-text;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include mobile-displayMedium;
+    padding: 1rem 0 1rem 0rem;
+  }
+}

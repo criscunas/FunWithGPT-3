@@ -1,0 +1,49 @@
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+@use '../../../styles/assets/displayMixins.scss' as *;
+
+
+.welcome {
+  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+
+  @include tabletSm {
+     padding: 3rem 0.5rem 0.5rem 0.5rem;
+  }
+
+  &__title {
+    @include mobile-displayMedium;
+    padding-bottom: 1rem;
+
+    @include tabletSm {
+      @include displayMedium;
+    }
+  }
+
+  &__msg {
+    @include mobile-body-text;
+    padding-bottom: 1rem;
+
+    @include tabletSm {
+      @include heading-text;
+      padding-bottom: 1.5rem;
+    }
+
+  }
+
+  &__item {
+    display: flex;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+  }
+  
+  &__item_text {
+    @include mobile-button-text;
+  }
+
+}
