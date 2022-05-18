@@ -18,14 +18,18 @@ export default async function (req, res) {
         prompt: ques,
         temperature: 0.1,
         top_p: 1.0,
-        max_tokens: 120,
+        max_tokens: 100,
       });
       return resp.data.choices[0].text;
     })
   )
 
   res.json({
-    result: response
+    result: response,
+    destination: {
+      city: city,
+      state: state
+    }
   });
 
 }

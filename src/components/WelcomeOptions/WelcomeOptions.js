@@ -11,8 +11,7 @@ export const WelcomeOptions = ({defaultHandle, travelHandle}) => {
     <div className={style.welcome}>
       <h1 className={style.welcome__title}>Getting Started</h1>
       <p className={style.welcome__msg}>
-        Simply select the engine of your choosing and ask away ! Or select from
-        one of fun mini apps to try.
+        Simply select the engine of your choosing and ask away ! Or try out a fun mini travel app .
       </p>
       <Grid container spacing={1}>
         <Grid item xs={6}>

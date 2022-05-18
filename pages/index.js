@@ -13,13 +13,40 @@ import axios from "axios";
 
 export default function Home() {
   
-  
   const [travel, setTravel] = useState(false);
   const [defaul, setDefaul] = useState(true);
   const [option, setOption] = useState("Davinci");
+  const [response, setResponse] = useState(false)
 
 
   const dispatch = useDispatch();
+
+
+  const onSubmit = async (values) => {
+        
+    const resp = await axios
+      .post(`/api/Engine`, {
+        prompt: values.prompt,
+        engine: option
+      })
+      .then((res) => {
+        setResponse(true);
+        console.log(res.data.engine);
+        return res;
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+
+    const ans = await resp.data.result;
+
+    const obj = {
+      prompt: values.prompt,
+      response: ans,
+    };
+    dispatch({ type: "prompts/add", payload: obj });
+  };
+
 
   const userOption = (opt) => {
     setOption(opt);
@@ -51,40 +78,16 @@ export default function Home() {
         <div>
           <SwiperList handler={userOption} />
           <div className={style.home__form}>
-            <PromptForm handler={onSubmit} />
+            <PromptForm handler={onSubmit} engine={option} />
           </div>
           <div className={style.home__response}>
-            <PromptList />
+            {response ? <PromptList /> : null}
           </div>
         </div>
       );
     }
 
   }
-
-  const onSubmit = async (values) => {
-    const resp = await axios
-      .post(`/api/${option}`, {
-        prompt: values.prompt,
-      })
-      .then((res) => {
-        console.log(res);
-        return res;
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-
-    const ans = await resp.data.result;
-
-    const obj = {
-      prompt: values.prompt,
-      response: ans,
-    };
-    dispatch({ type: "prompts/add", payload: obj }); 
-  };
-
-
 
   return (
     <div className={style.home}>
