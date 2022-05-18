@@ -4,7 +4,7 @@ import { TextField, IconButton} from "@material-ui/core";
 import PlayCircleOutlineIcon from "@mui/icons-material/PlayCircleOutline";
 import * as Yup from "yup";
 
-export const PromptForm = ({handler}) => {
+export const PromptForm = ({handler, engine}) => {
  
   const promptSchema = Yup.object({
     prompt: Yup.string().required('Prompt Required')
@@ -24,6 +24,7 @@ export const PromptForm = ({handler}) => {
   return (
     <>
       <form onSubmit={formik.handleSubmit} className={style.prompt}>
+        <h1 className={style.prompt__engine}> Current Engine: {engine} </h1>
         <div className={style.prompt__header}>
           <h1 className={style.prompt__header_text}> Enter Prompt </h1>
           <IconButton

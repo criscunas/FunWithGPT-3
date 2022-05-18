@@ -9,11 +9,20 @@
   
   &__header {
     @include mobile-displayMedium;
-    padding: 2rem 0.5rem 0.5rem  0.5rem;
+    padding: 2rem 0.5rem 0.5rem 0.5rem;
+
+    @include tabletSm {
+      @include displayMedium;
+      padding: 2rem 0.5rem 1rem 0.5rem;
+    }
+  }
+
+  &__note {
+    @include mobile-caption-text;
   }
 
   &__container {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 auto;
   }
 }

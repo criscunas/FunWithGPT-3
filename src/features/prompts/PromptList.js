@@ -3,6 +3,7 @@ import style from './PromptList.module.scss';
 import {Grid ,Card } from "@material-ui/core";
 import ClearIcon from "@mui/icons-material/Clear";
 import DeleteSweepRoundedIcon from "@mui/icons-material/DeleteSweepRounded";
+import { Loading } from "../../components/Loading";
 
 const selectedPrompts = (state) => state.prompts.map((prompt) => prompt.data)
 
@@ -29,7 +30,10 @@ const PromptList = () => {
             className = {style.response__answer_text}> Prompt <span> 
             <ClearIcon 
             onClick = {() => deleteResponse(i)}
-            color = "error"/> </span>  
+            color = "error"
+            style = {{cursor:"pointer"}}
+            /> 
+            </span>  
             </p>
             <p> {prompt.prompt} </p>
           </div>
@@ -45,12 +49,16 @@ const PromptList = () => {
 
   return (
     <div className = {style.response__container}>
-      <h1 className={style.response__title}>Responses 
-      <span>  <DeleteSweepRoundedIcon onClick = {() => deleteAll() } color = "error" /> </span> 
-      </h1>
-      <Grid container spacing={1}>
-        {renderedListItems}
-      </Grid>
+      {renderedListItems.length === 0 ? null :
+      <div>
+        <h1 className={style.response__title}>Responses 
+          <span>  <DeleteSweepRoundedIcon onClick = {() => deleteAll() } color = "error" style = {{cursor:"pointer"}} /> </span> 
+        </h1>
+        <Grid container spacing={1}>
+          {renderedListItems}
+        </Grid>
+      </div> 
+      }
     </div>
   );
 };

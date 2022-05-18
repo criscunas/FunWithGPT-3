@@ -5,11 +5,11 @@
 
 .welcome {
   padding: 1.5rem 0.5rem 0.5rem 0.5rem;
-  max-width: 500px;
+  max-width: 600px;
   margin: 0 auto;
 
   @include tabletSm {
-     padding: 2rem 0.5rem 0.5rem 0.5rem;
+     padding: 3rem 0.5rem 0.5rem 0.5rem;
   }
 
   &__title {
@@ -27,6 +27,7 @@
 
     @include tabletSm {
       @include heading-text;
+      padding-bottom: 1.5rem;
     }
 
   }

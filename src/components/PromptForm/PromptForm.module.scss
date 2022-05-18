@@ -5,8 +5,8 @@
 .prompt {
   display: flex;
   flex-direction: column;  
-  max-width: 500px;
-  margin: 0.5rem auto;
+  max-width: 600px;
+  margin: 1rem auto;
 
   &__header {
     display: flex;
@@ -21,8 +21,8 @@
 
   }
 
-  &__textfield {
-    
+  &__engine {
+    @include mobile-body-text;
   }
 
   &__button {
