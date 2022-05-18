@@ -11,8 +11,8 @@ export const GenerateTravel = ({data, destination}) => {
       </div>
       <div className={style.data__restaurants}>
         <h1 className={style.data__title}> Must Try Eats </h1>
-        {data[0].split("\n").map((ele) => {
-          return <p className={style.data__text}> {ele} </p>;
+        {data[0].split("\n").map((ele,i) => {
+          return <p key = {i} className={style.data__text}> {ele} </p>;
         })}
       </div>
 
