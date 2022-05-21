@@ -38,7 +38,7 @@ export const PromptForm = ({handler, engine}) => {
         </div>
         <TextField
           name="prompt"
-          placeholder="Prompt"
+          placeholder="Ask a question like how are you today? or what is the weather today? End questions with a question mark. "
           variant="outlined"
           type="text"
           margin="dense"
