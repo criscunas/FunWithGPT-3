@@ -4,6 +4,7 @@ import styled from 'styled-components'
 const LoadingDiv = styled.div`
   text-align: center;
   color: #004c3f;
+  padding-bottom: 1rem;
 `;
 
 const Title = styled.p`
