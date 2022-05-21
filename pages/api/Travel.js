@@ -18,7 +18,7 @@ export default async function (req, res) {
         prompt: ques,
         temperature: 0.5,
         top_p: 1.0,
-        max_tokens: 105,
+        max_tokens: 150,
       });
       return resp.data.choices[0].text;
     })
