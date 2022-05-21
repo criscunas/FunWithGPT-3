@@ -1,30 +1,55 @@
-import style from './PageHeader.module.scss';
-import { AppBar, Box , Toolbar} from "@material-ui/core";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { useRouter } from 'next/router';
+import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
+import { useRouter } from "next/router";
+import styled from "styled-components";
 
+const Nav = styled.div`
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: white;
+`;
+
+const NavIcons = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+`;
+
+const NavText = styled.p`
+  color: #004c3f;
+  font-size: 15px;
+  line-height: 20px;
+  font-weight: 400;
+`;
 
 export const PageHeader = () => {
-  
   const Router = useRouter();
 
   return (
-    <Box className={style.header}>
-      <AppBar position="static" style={{ backgroundColor: "white" }}>
-        <Toolbar className={style.header__nav}>
-          <div className={style.header__nav_icons}>
-            <GitHubIcon htmlColor="black" onClick = {() => {
-              Router.push("https://github.com/criscunas/FunWithGPT-3");
-            }} />
-            <LinkedInIcon htmlColor="#0072b1" onClick = {() => {
-              Router.push("https://www.linkedin.com/in/cristophercunas/");
-            }}/>
-          </div>
-
-          <h2 className={style.header__nav_text}>Powered by OpenAI</h2>
-        </Toolbar>
-      </AppBar>
-    </Box>
+    <Nav>
+      <NavIcons>
+        <GitHubIcon
+          htmlColor="black"
+          onClick={() => {
+            Router.push("https://github.com/criscunas/FunWithGPT-3");
+          }}
+        />
+        <LinkedInIcon
+          htmlColor="#0072b1"
+          onClick={() => {
+            Router.push("https://www.linkedin.com/in/cristophercunas/");
+          }}
+        />
+        <EmojiPeopleIcon
+          htmlColor="#004C3F"
+          onClick={() => {
+            Router.push("https://criscunas.dev");
+          }}
+        />
+      </NavIcons>
+      <NavText>Powered by OpenAI</NavText>
+    </Nav>
   );
-}
+};

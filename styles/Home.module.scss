@@ -9,12 +9,20 @@
 
   &__content {
     margin: 1.5rem 0;
-    padding: 0 0.5rem;
+    background-image: url('../public/images/shopify-bg.svg');
+    background-position: top;
+    background-repeat: no-repeat;
+    
+    
   }
 
   &__welcome {
     padding: 1.5rem 0.5rem 0.5rem 0.5rem;
     
+  }
+
+  &__render {
+
   }
 
   &__welcome_title {
@@ -32,10 +40,6 @@
     padding: 1rem 0rem 0.5rem 0rem;
     text-align: center;
     @include mobile-displaySmall;
-  }
-
-  &__form {
-    padding: 0.5rem 0.5rem;
   }
 
   &__response {

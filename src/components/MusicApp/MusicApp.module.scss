@@ -3,7 +3,7 @@
 @use '../../../styles/assets/displayMixins.scss' as *;
 
 
-.travel {
+.music {
 
   padding: 0rem 1rem 0rem 1rem;
   max-width: 600px;
@@ -19,47 +19,33 @@
     
 
     @include tabletSm {
-    
-      font-weight: 700;
+      
+      
     }
   }
   
   &__subtitle {
-    
     @include body-main;
 
+
     @include tabletSm {
-      
+    
     }
   }
 
+
   &__note {
-    padding: 0.5rem 0 0.5rem 0;
+    padding: 1rem 0;
+    // @include mobile-caption-text;
     @include body-subtitle;
 
-    @include tabletSm {
-    }
   }
 
   &__form {
     margin: 1.5rem 0;
   }
 
-  &__form_random {    
-    display: flex;
-    cursor: pointer;
-    justify-content: center;
-    max-width: 600px;
-    padding: 2rem 0.5rem 0 0.5rem;
-    gap: 1rem;
-    align-items: center;
-  }
 
-  &__form_text {
-    @include mobile-body-text;
-    color: $shopify-dg;
-    font-weight: 600;
-  }
 
   &__results {
     padding: 1rem 0 0rem 0;

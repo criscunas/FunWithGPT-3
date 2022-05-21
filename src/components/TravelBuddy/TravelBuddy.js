@@ -67,7 +67,7 @@ export default function TravelBuddy () {
       </p>
 
       <p className={style.travel__note}>
-        For better results, submit entry in the form of "Miami, Florida".
+        * For best results, submit entry in the form of "Miami, Florida".
       </p>
       <div className={style.travel__form}>
         <TravelForm handler={onSubmit} />
@@ -77,8 +77,12 @@ export default function TravelBuddy () {
             {" "}
             Click here for a randomly generated destination{" "}
           </h2>
-          <IconButton variant="contained" size="small">
-            <AutoModeRoundedIcon color="success" onClick = {() => randomDestination()} />
+          <IconButton
+            variant="contained"
+            size="small"
+            onClick={() => randomDestination()}
+          >
+            <AutoModeRoundedIcon color="success" />
           </IconButton>
         </div>
       </div>

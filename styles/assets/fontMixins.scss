@@ -1,3 +1,6 @@
+@use './variables.scss' as *;
+@use './displayMixins.scss' as *;
+
 @mixin caption-text {
   font-size: 12px;
   line-height: 16px;
@@ -120,4 +123,45 @@ font-weight: 500;
 font-size: 27px;
 line-height: 36px;
 font-weight: 500;
+}
+
+@mixin section-header {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.5rem;
+  letter-spacing:2px;
+  color: white;
+  
+
+  @include tabletMd {
+    font-size: 24px;
+    line-height: 1.7rem;  
+  }
+}
+
+
+@mixin body-main {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: rgb(10, 9, 9);
+  font-weight: bold;
+  color: white;
+
+  @include tabletMd {
+    font-size: 1.1rem;
+
+  }
+
+  
+}
+
+@mixin body-subtitle {
+  font-size: 0.85rem;
+  line-height: 1.2rem;
+  font-weight: 600;
+  color: $polaris-yellow;
+
+  @include tabletMd {
+    font-size: 0.95rem;
+  }
 }
