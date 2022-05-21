@@ -42,23 +42,15 @@ table{
     border-spacing: 0;
 }
 
-input{
-    // -webkit-appearance: none;
-    // border-radius: 0;
-}
-
 
 .swiper {
   width: 100%;
   height: fit-content;
-  
-//   border: 1px solid red;
+
 }
 
 .swiper-slide {
-  
   cursor: grab;
-  /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
   display: -webkit-flex;

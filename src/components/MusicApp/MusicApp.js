@@ -24,7 +24,6 @@ export default function MusicApp () {
         instrument: values.checked[2],
       })
       .then((res) => {
-        console.log(res.data);
         setPlaylist(res.data.result)
       })
       .catch((err) => {

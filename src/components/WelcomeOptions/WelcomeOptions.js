@@ -1,8 +1,5 @@
 import style from './WelcomeOptions.module.scss';
-import TravelExploreIcon from "@mui/icons-material/TravelExplore";
 import { Grid, Icon } from "@material-ui/core";
-import EngineeringIcon from "@mui/icons-material/Engineering";
-import LibraryMusicIcon from '@mui/icons-material/LibraryMusic';
 import Image from 'next/image';
 
 export const WelcomeOptions = ({defaultHandle, travelHandle, musicHandle}) => {

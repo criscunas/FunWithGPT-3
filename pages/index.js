@@ -33,7 +33,6 @@ export default function Home() {
       })
       .then((res) => {
         setResponse(true);
-        console.log(res.data.engine);
         return res;
       })
       .catch((err) => {
