@@ -4,9 +4,11 @@
 
 
 .data {
-  padding-bottom: 1.5rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+
   @include tabletSm {
-    padding-bottom: 2.5rem;
+    padding: 1.5rem;
   }
 
   &__destination {
@@ -15,6 +17,8 @@
 
   &__destination_text {
     @include mobile-displayMedium;
+    font-weight: 600;
+    color: $shopify-dg;
   }
 
   &__title {

@@ -7,6 +7,7 @@ import PromptList from "../src/features/prompts/PromptList";
 import { HeroSection } from "../src/components/HeroSection/HeroSection";
 import { SwiperList } from "../src/components/SwiperList/SwiperList";
 import { WelcomeOptions } from "../src/components/WelcomeOptions/WelcomeOptions";
+import MusicApp from "../src/components/MusicApp/MusicApp";
 import TravelBuddy from "../src/components/TravelBuddy/TravelBuddy";
 import axios from "axios";
 
@@ -16,6 +17,7 @@ export default function Home() {
   const [travel, setTravel] = useState(false);
   const [defaul, setDefaul] = useState(true);
   const [option, setOption] = useState("Davinci");
+  const [music, setMusic] = useState(false)
   const [response, setResponse] = useState(false)
 
 
@@ -47,42 +49,54 @@ export default function Home() {
     dispatch({ type: "prompts/add", payload: obj });
   };
 
-
   const userOption = (opt) => {
     setOption(opt);
   };
 
   const renderTravel = () => {
-    setTravel(true)
+    setTravel(true);
+    setMusic(false);
     setDefaul(false);
   }
 
   const renderDefault = () => {  
     setDefaul(true)
     setTravel(false)
+    setMusic(false)
+  }
+
+  const renderMusic = () => {
+    setMusic(true)
+    setDefaul(false)
+    setTravel(false)
   }
 
   const display = () => {
     
-    if (travel) {
-      return (
-        <TravelBuddy />
-      )
-    }
-    else {
-      null
-    }
-
     if (defaul) {
       return (
-        <div>
+        <div className={style.home__render}>
           <SwiperList handler={userOption} />
-          <div className={style.home__form}>
             <PromptForm handler={onSubmit} engine={option} />
-          </div>
           <div className={style.home__response}>
             {response ? <PromptList /> : null}
           </div>
+        </div>
+      );
+    }
+
+    if (travel) {
+      return (
+        <div className={style.home__render}>
+          <TravelBuddy />
+        </div>
+      );
+    }
+    
+    if(music) {
+      return (
+        <div className={style.home__render}>
+          <MusicApp />
         </div>
       );
     }
@@ -92,11 +106,16 @@ export default function Home() {
   return (
     <div className={style.home}>
       <HeroSection />
-      <Paper elevation={2} variant="elevation" className={style.home__content}>
-        <WelcomeOptions 
-          travelHandle = {renderTravel} 
-          defaultHandle = {renderDefault}
-          />
+      <Paper
+        elevation={2}
+        variant="elevation"
+        className={style.home__content}
+      >
+        <WelcomeOptions
+          travelHandle={renderTravel}
+          defaultHandle={renderDefault}
+          musicHandle = {renderMusic}
+        />
         {display()}
       </Paper>
     </div>

@@ -6,14 +6,19 @@
 .swiper {
 
   height:fit-content;
-  
+  border-radius: 3px;
+  border: 2px solid $polaris-pink;
+
   &__header {
-    @include mobile-displayMedium;
-    padding: 2rem 0.5rem 0.5rem 0.5rem;
+    @include section-header;
+    padding: 0 0rem 1rem 0rem ;
+    // padding: 2rem 0.5rem 0.5rem 0.5rem;
+    
 
     @include tabletSm {
-      @include displayMedium;
-      padding: 2rem 0.5rem 1rem 0.5rem;
+      // @include displayMedium;
+      // padding: 2rem 0.5rem 1rem 0.5rem;
+      // font-weight: 600;
     }
   }
 
@@ -24,5 +29,6 @@
   &__container {
     max-width: 600px;
     margin: 0 auto;
+    
   }
 }

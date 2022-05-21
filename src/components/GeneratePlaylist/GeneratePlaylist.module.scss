@@ -1,0 +1,42 @@
+@use '../../../styles/assets/variables.scss' as *;
+@use '../../../styles/assets/fontMixins.scss' as *;
+@use '../../../styles/assets/displayMixins.scss' as *;
+
+.playlist {
+
+  padding: 1rem;
+  margin-bottom: 2rem;
+
+  &__title {
+    @include mobile-displayMedium;
+    font-weight: 600;
+    color: $shopify-dg;
+    padding: 1rem 0;
+  }
+
+  &__text {
+    @include body-main;
+    color: black;
+    font-weight: 400;
+  }
+
+
+  &__link {
+    padding: 1.5rem 0 1rem 0;
+  }
+
+  &__link_text {
+    text-decoration: none;
+    @include body-subtitle;
+    color: $shopify-dg;
+
+    &:hover {
+      text-decoration: underline;
+
+    }
+
+    span {
+      padding-left: 0.5rem;
+    }
+  }
+}

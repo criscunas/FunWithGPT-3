@@ -43,8 +43,8 @@ table{
 }
 
 input{
-    -webkit-appearance: none;
-    border-radius: 0;
+    // -webkit-appearance: none;
+    // border-radius: 0;
 }
 
 
@@ -76,4 +76,12 @@ input{
 
 html {
 background-color: #42474C;
+}
+
+.MuiOutlinedInput-multiline.MuiOutlinedInput-marginDense {
+    background-color: white !important;
+}
+
+.MuiFormControl-marginDense {
+ background-color: white !important;   
 }
