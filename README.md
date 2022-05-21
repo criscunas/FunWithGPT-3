@@ -6,6 +6,7 @@
 * Redux
 * Next.js
 * Scss
+* Styled Components
 * Material UI
 * Formik  
 * Yup 
