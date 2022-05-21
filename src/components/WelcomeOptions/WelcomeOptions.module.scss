@@ -4,25 +4,32 @@
 
 
 .welcome {
-  padding: 1.5rem 0.5rem 0.5rem 0.5rem;
-  max-width: 600px;
-  margin: 0 auto;
+  padding: 2rem 1rem 1rem 1rem;
 
   @include tabletSm {
-     padding: 3rem 0.5rem 0.5rem 0.5rem;
+     padding: 3rem 1.5rem 0.5rem 1.5rem;
+  }
+
+
+  &__content {
+    max-width: 600px;
+    margin: 0 auto;
+    
   }
 
   &__title {
-    @include mobile-displayMedium;
+    @include section-header;
     padding-bottom: 1rem;
+    font-weight: bold;
 
     @include tabletSm {
-      @include displayMedium;
+      
+      
     }
   }
 
   &__msg {
-    @include mobile-body-text;
+    @include body-main;
     padding-bottom: 1rem;
 
     @include tabletSm {
@@ -33,17 +40,21 @@
   }
 
   &__item {
-    display: flex;
     padding: 1rem;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
+    text-align: center;
     cursor: pointer;
+
+    @include tabletSm {
+      padding: 1rem 1rem 1.5rem 1rem;
+    }
   }
   
   &__item_text {
     @include mobile-button-text;
+    color: white;
+    line-height: 1.5rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
   }
 
 }

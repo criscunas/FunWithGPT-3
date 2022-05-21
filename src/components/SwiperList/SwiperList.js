@@ -9,7 +9,6 @@ export const SwiperList = ({handler}) => {
   return (
     <div className={style.swiper__container}>
       <h1 className={style.swiper__header}> Swipe & Select an AI engine </h1>
-      <p className={style.swiper__note}></p>
       <Swiper className={style.swiper}>
         {data.options.map((opt, i) => {
           return (

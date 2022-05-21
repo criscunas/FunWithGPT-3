@@ -1,7 +1,7 @@
 import { Configuration, OpenAIApi } from "openai";
 
 const configuration = new Configuration({
-  apiKey: process.env.apiKey,
+  apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
@@ -16,9 +16,9 @@ export default async function (req, res) {
     questions.map( async ques => {
       const resp = await openai.createCompletion("text-davinci-002", {
         prompt: ques,
-        temperature: 0.1,
+        temperature: 0.5,
         top_p: 1.0,
-        max_tokens: 100,
+        max_tokens: 105,
       });
       return resp.data.choices[0].text;
     })

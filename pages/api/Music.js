@@ -15,16 +15,16 @@ export default async function (req, res) {
     `Name 3 ${feel} songs ?\nResponse:`,
     `Name 3 songs good for ${action}?\nResponse:`,
     `Name 3 songs that use a ${instrument}\nResponse:`,
-    `Give me a working youtube link\nResponse`
+    `Give me the rick rolled link\nResponse`
   ];
   
   const response = await Promise.all(
     questions.map(async (ques) => {
-      const resp = await openai.createCompletion("text-curie-001", {
+      const resp = await openai.createCompletion("text-davinci-001", {
         prompt: ques,
-        temperature: 0.5,
+        temperature: 1,
         top_p: 1.0,
-        max_tokens: 80,
+        max_tokens: 85,
       });
       return resp.data.choices[0].text;
     })
