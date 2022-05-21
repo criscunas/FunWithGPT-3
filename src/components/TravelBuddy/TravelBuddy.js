@@ -73,7 +73,10 @@ export default function TravelBuddy () {
         <TravelForm handler={onSubmit} />
 
         <div className={style.travel__form_random}>
-          <h2 className={style.travel__form_text}>
+          <h2
+            className={style.travel__form_text}
+            onClick={() => randomDestination()}
+          >
             {" "}
             Click here for a randomly generated destination{" "}
           </h2>
