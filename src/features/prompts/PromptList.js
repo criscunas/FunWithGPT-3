@@ -11,9 +11,9 @@ const PromptList = () => {
 
   const dispatch = useDispatch()
 
-  const deleteResponse = (id) => {
-    dispatch({ type: "prompts/delete", payload: id });
-  }
+  // const deleteResponse = (id) => {
+  //   dispatch({ type: "prompts/delete", payload: id });
+  // }
 
   const deleteAll = () => {
     dispatch({type:'prompts/allDelete'})
@@ -21,19 +21,13 @@ const PromptList = () => {
 
   const prompts = useSelector(selectedPrompts, shallowEqual);
 
-  const renderedListItems = prompts.map((prompt, i ) => {
+  const renderedListItems = prompts.slice(0).reverse().map((prompt, i ) => {
     return (
       <Grid item xs={12} sm={6} key = {i}>
         <Card variant = "outlined" className={style.response}>
           <div className={style.response__answer}>
             <p
-            className = {style.response__answer_text}> Prompt <span> 
-            <ClearIcon 
-            onClick = {() => deleteResponse(i)}
-            color = "error"
-            style = {{cursor:"pointer"}}
-            /> 
-            </span>  
+            className = {style.response__answer_text}> Prompt 
             </p>
             <p> {prompt.prompt} </p>
           </div>
